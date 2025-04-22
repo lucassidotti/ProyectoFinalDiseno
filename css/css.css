@@ -1,0 +1,24 @@
+*{
+    margin: 8px;
+    margin-right: 15px;
+}
+body {
+    
+    background-color: #fdf8f3;
+  }
+  
+  /* Header con fondo centrado horizontalmente y arriba */
+  .encabezado {
+    width: 100%;
+    height: 200px; /* podés ajustar esta altura */
+    background-image: url(imagenes/logo.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    position: fixed;
+  }
+  .inicio{
+    list-style: none;
+    text-align: right;
+  }
+  
