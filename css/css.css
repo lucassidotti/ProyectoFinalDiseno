@@ -1,24 +1,49 @@
 *{
-    margin: 8px;
-    margin-right: 15px;
+  margin: 0;
+  background-color: rgb(248, 245, 240);
+
 }
-body {
-    
-    background-color: #fdf8f3;
-  }
+.encabezado{
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(64, 6, 135);
+  width: 90%;
+  /* width: max-content probar en casa */
+  position: relative;
+}
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  /* Header con fondo centrado horizontalmente y arriba */
-  .encabezado {
-    width: 100%;
-    height: 200px; /* podés ajustar esta altura */
-    background-image: url(imagenes/logo.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
-    position: fixed;
-  }
-  .inicio{
-    list-style: none;
-    text-align: right;
-  }
-  
+}
+.contenedor img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.logo{
+  width: 400px;
+  height: auto
+}
+.inicio{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.inicio-lateral{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.inicio li a{
+  margin-right: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+.inicio-lateral li a{
+  margin-right: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 6px;
+}
