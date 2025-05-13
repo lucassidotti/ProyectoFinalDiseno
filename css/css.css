@@ -5,7 +5,10 @@
   background-color: rgb(248, 245, 240);
 }
 .page1{
-  max-width: 1440px;
+  max-width: 1300px;
+  margin-left: 10px;
+  border: 2px solid black;
+  height: 1500px;
 }
 .encabezado{
   box-sizing: border-box;
@@ -75,35 +78,22 @@
   width: 100%;
   height: 200px;
 }
+main{
+  margin: 0 auto;
+}
 .contenedor-main{
   box-sizing: border-box;
-  display: flex;
-  height: 50em;
-  margin-top: 0.8em;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 10px;
 }
-.img-ninos{
-  display: flex;
-  width: 34.375em;
-  height: 38.125em;
+.img-ninos , .img-ninas , .img-bebes{
+ padding: 0.6em;
 }
-.img-ninas{
-  background-color:rgb(196, 201, 200);
-  display: flex;
-  left: 30em;
-  width: 34.375em;
-  height: 38.125em;
-}
-.img-bebes{
-  left: 60em;
-  display: flex;
-  width: 34.375em;
-  height: 38.125em;
-}
+
 footer{
   box-sizing: border-box;
-  margin-top: 1em;
-  height: auto;
+  margin: 0 auto;
   width: 100%;
   font-family: "Atma";
 }
@@ -127,7 +117,7 @@ footer{
 .ayuda{
   list-style: none;
   position: absolute;
-  left: 37.5em;
+  left: 29em;
 }
 .cont-envios{
   box-sizing: border-box;
@@ -136,7 +126,7 @@ footer{
 .envios{
   list-style: none;
   position: absolute;
-  left: 56.25em;
+  left: 40em;
 }
 .redes{
   display: flex;
@@ -160,13 +150,14 @@ footer{
   list-style-image: url(imagenes/gorjeo.png);
   margin-left: 1.875em;
 }
+.cont-form{
+  position: relative;
+}
 .novedades{
   position: absolute;
-  left: 75em;
+  left: 51em;
 }
-.novedades{
-  padding: 0.625em;
-}
+
 input{
   padding: 0.313em;
   border: none;
