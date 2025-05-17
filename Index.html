@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giannini Kidswear</title>
-  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <link rel="shortcut icon" href="imagenes/Gia.png" type="image/x-icon">
 </head>
 <div class="page1">
 <body>
   <header class="encabezado">
     <div class="contenedor">
-      <a href=""> 
-    <img src="imagenes/logo.png" alt="logo"class="logo"></a>
+      <a href=""><img src="imagenes/logo.png" alt="logo"class="logo"></a>
     </div>
     <ul class="inicio">
         <li><a href="">Descuentos</a></li>
@@ -21,58 +20,69 @@
         <li><a href="">Niños</a></li>
         <li><a href="">Niñas</a></li>
     </ul>
-    <div class="cont-lateral">
     <ul class="inicio-lateral">
-      <li class="buscar"><a href="">Buscar</a></li>
-      <li class="cuenta"><a href="">Cuenta</a></li>
-      <li class="carrito"><a href="">Carrito</a></li>
+      <li class="buscar">
+        <label for="buscar"></label>
+        <input type="search" id="buscar" placeholder="¿Qué querés buscar?">
+      </li>
+      <li class="cuenta"><a href="">Mi cuenta</a></li>
+      <li class="carrito"><a href="">Mis prendas</a></li>
     </ul>
-    </div>
-    <aside class="publi-header">slider</aside>
   </header>
-</body>
-<main>
+  <main>
+  <aside class="slider">Aca va un slider cuando lo aprenda a hacer
+  </aside>
   <div class="contenedor-main">
-  <a href=""><img src="imagenes/ninos.jpg" alt="" class="img-ninos"></a>
+  <a href=""><img src="imagenes/ninos.jpeg" alt="" class="img-ninos"></a>
   <a href=""><img src="imagenes/ninas.jpg" alt="" class="img-ninas"></a>
   <a href=""><img src="imagenes/bebes.jpg" alt="" class="img-bebes"></a>
   </div>
 </main>
-
+<section class="favoritos">
+    <h2>¡Los favoritos del mes!</h2>
+</section>
+  <div class="cont-favs">
+  <a href=""><img src="imagenes/fav-bebe.jpg" alt="" class="img-fav1"></a>
+  <a href=""><img src="imagenes/fav-bebe2.jpg" alt="" class="img-fav2"></a>
+  <a href=""><img src="imagenes/fav-nina.jpg" alt="" class="img-fav3"></a>
+  <a href=""><img src="imagenes/fav-nino.jpg" alt="" class="img-fav4"></a>
+  </div>
+  <section class="publi">Aca va una publi</section>
+  <section class="ofertas">
+    <h2>¡Ofertas!</h2>
+  </section>
+  <div class="cont-ofertas">
+  <a href=""><img src="imagenes/ofer-1.jpg" alt="" class="img-ofer1"></a>
+  <a href=""><img src="imagenes/ofer-2.jpg" alt="" class="img-ofer2"></a>
+  <a href=""><img src="imagenes/ofer-3.jpg" alt="" class="img-ofer3"></a>
+  <a href=""><img src="imagenes/ofer-4.jpg" alt="" class="img-ofer4"></a>
+  </div>
 <footer>
   <div class="logo-footer">
     <img src="imagenes/logo-f.png" alt="">
+    <ul class="redes">
+    <li class="instagram"><a href="https://www.instagram.com/">Instagram</a></li>
+    <li class="facebook"><a href="https://www.facebook.com/">Facebook</a></li>
+    <li class="twitter"><a href="https://x.com/home">Twitter</a></li>
+    </ul>
   </div>
-  <div class="cont-nosotros">
+  <div class="empresa">
     <ul class="nosotros">
       <li>Locales</li>
       <li>Sobre nosotros</li>
       <li>Terminos y condiciones</li>
     </ul>
-  </div>
-  <div class="cont-ayuda">
     <ul class="ayuda">
       <li>FAQ</li>
       <li>Cambios y devoluciones</li>
       <li>Promos vigentes</li>
       <li>Boton de arrepentimiento</li>
     </ul>
-  </div>
-  <div class="cont-envios">
     <ul class="envios">
       <li>Seguimiento de envio</li>
       <li>Como comprar</li>
       <li>Formas de envio</li>
     </ul>
-  </div>
-<div class="cont-redes">
-  <ul class="redes">
-    <li class="instagram"><a href="https://www.instagram.com/">Instagram</a></li>
-    <li class="facebook"><a href="https://www.facebook.com/">Facebook</a></li>
-    <li class="twitter"><a href="https://x.com/home">Twitter</a></li>
-  </ul>
-</div>
-  <div class="cont-form">
   <form action="" method="post" class="novedades" >
     <label for="">¡Conocé todas nuestras novedades!</label> <br>
     <label for="">¿Querés buenas ofertas y mucha inspiración? Registrate en nuestro newsletter</label>
@@ -92,5 +102,6 @@
   </form>
   </div>
 </footer>
+</body>
 </div>
 </html>
