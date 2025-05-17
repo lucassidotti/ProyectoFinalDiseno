@@ -4,7 +4,10 @@
   padding: 0;
   background-color: rgb(248, 245, 240);
 }
-
+.page1{
+  margin: 8px;
+  max-width: 100%;
+}
 .encabezado{
   box-sizing: border-box;
   width: 100%;
@@ -72,10 +75,7 @@
   list-style-image: url(imagenes/carrito.png);
   margin-left: 2em;
 }
-.page1{
-  margin: 8px;
-  max-width: 100%;
-}
+
 .slider{
   margin-top: 1em;
   box-sizing: border-box;
