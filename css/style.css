@@ -2,10 +2,10 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: rgb(248, 245, 240);
 }
 .page1{
+    box-sizing: border-box;
     width: 100%;
 }
 .encabezado{
@@ -18,6 +18,7 @@
 .cont-logo{
     display: flex;
     grid-area: cont-logo;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
 }
@@ -74,67 +75,6 @@
   list-style-image: url(imagenes/carrito.png);
   margin-left: 1em;
 }
-.slider{
-  margin-top: 1em;
-  border: 2px solid black;
-  height: 300px;
-}
-.contenedor-main{
-  margin-top: 0.5em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:0.5em;
-}
-.favoritos{
-  margin: 0 auto;
-  width: 100%;
-  height: 50px;
-  color: rgb(224, 202, 245);
-  text-align: center;
-  font-family: "Atma";
-  font-size: 20px;
-  text-shadow:-1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-}
-.cont-favs{
-  margin-top: 0.5em;
-  gap: 5.9em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.img-fav1, .img-fav2, .img-fav3, .img-fav4{
-    border: 1px solid rgb(224, 202, 245);
-}
-.publi{
-  margin-top: 1em;
-  border: 2px solid black;
-  width: 100%px;
-  height: 200px;
-}
-.ofertas{
-  margin: 0 auto;
-  width: 100%;
-  height: 50px;
-  color: rgb(224, 202, 245);
-  text-align: center;
-  font-family: "Atma";
-  font-size: 20px;
-  text-shadow: -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-}
-.cont-ofertas{
-  margin-top: 0.5em;
-  gap: 5.9em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.img-ofer1, .img-ofer2, .img-ofer3, .img-ofer4{
-  border: 1px solid rgb(224, 202, 245);
-}
 footer{
     display: grid;
   grid-template-areas:
@@ -179,24 +119,20 @@ footer{
 .cont-nos{
   grid-area: 1/2;
   display: grid;
-  justify-items:center;
-  align-items: end;
+  align-items:end;
 }
 .cont-ayuda{
     grid-area: 1/3;
     display: grid;
-    justify-items:center;
     align-items:end;
 }
 .cont-envios{
     grid-area: 1/4;
     display: grid;
-    justify-items:center;
     align-items:end;
 }
 .cont-form{
     display: grid;
-    justify-items:center;
     align-items:end;
     grid-area: 1/5;
 }
@@ -207,10 +143,9 @@ footer{
 .cont-bot{
     grid-area: 2/5;
     display:grid;
-    justify-items: center;
-    align-items: center;
+    justify-items: safe;
 }
-.cont-bot input{
+.novedades input{
   padding: 0.313em;
   border: none;
   border-bottom: 1px solid black;
@@ -223,5 +158,4 @@ footer{
   border-radius: 10px;
   background: aquamarine;
   font-family: "Roboto";
-  width: 50%;
 }
