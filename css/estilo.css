@@ -6,7 +6,7 @@
   background-color: rgb(248, 245, 240);
 }
 .page1{
-    width: 100%;
+    max-width: 100%;
 }
 .encabezado{
     display: grid;
@@ -16,7 +16,7 @@
     height: 100%;
 }
 .cont-logo{
-    display: flex;
+    display: grid;
     grid-area: cont-logo;
     justify-content: center;
     align-items: center;
@@ -70,6 +70,51 @@
   list-style-image: url(imagenes/cuenta.png);
   margin-right: 0.5em;
 }
+#login{
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+#login:target{
+  display: flex;
+}
+#login .ventana{
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+
+}
+.ingresar-pop{
+  margin-top: 0.5em;
+  padding: 5px;
+  background: rgb(64, 228, 64);
+  font-family: "Roboto";
+  border-radius: 8px;
+  width: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.ventana{
+  position: relative;
+  font-family: "Roboto";
+}
+.ventana .cerrar-pop{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
+.cerrar-pop img{
+  display: block;
+  width: 1em;
+  height: 1em;
+}
 .carrito{
   list-style-image: url(imagenes/carrito.png);
   margin-left: 1em;
@@ -84,6 +129,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap:0.5em;
+}
+.img-ninos, .img-ninas, .img-bebes{
+  display: flex;
+  width: 100%;
 }
 .favoritos{
   margin: 0 auto;
@@ -106,6 +155,8 @@
 }
 .img-fav1, .img-fav2, .img-fav3, .img-fav4{
     border: 1px solid rgb(224, 202, 245);
+    display: flex;
+    width: 100%;
 }
 .publi{
   margin-top: 1em;
@@ -134,6 +185,8 @@
 }
 .img-ofer1, .img-ofer2, .img-ofer3, .img-ofer4{
   border: 1px solid rgb(224, 202, 245);
+  display: flex;
+  width: 100%;
 }
 footer{
     display: grid;

@@ -8,54 +8,59 @@
     box-sizing: border-box;
     width: 100%;
 }
-.encabezado{
-    display: grid;
-    grid-template-areas: "inicio cont-logo inicio-lateral";
-    grid-template-columns: auto 1fr auto;
-    box-sizing: border-box;
-    height: 100%;
+.encabezado {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "inicio cont-logo inicio-lateral";
+  box-sizing: border-box;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.cont-logo{
-    display: flex;
-    grid-area: cont-logo;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
+
+.cont-logo {
+  display: grid;
+  grid-area: cont-logo;
+  justify-content: center;
+  align-items: center;
 }
-.logo{
-  width: 400px;
-  height: 100%;
+.logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
-.inicio{
-    grid-area: inicio;
-    display: flex;
-    align-items: flex-end;
-    list-style: none;
-    height: 100%;
-}
-.inicio-lateral{
-  grid-area: inicio-lateral;
+
+.inicio, .inicio-lateral {
   display: flex;
-  justify-items: end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   list-style: none;
   height: 100%;
+  padding: 0;
 }
-.inicio li a{
-    display: block;
-    font-family: "Atma";
-    margin-right: 0.313em;
-    padding: 0.313em;
-    text-decoration: none;
-    background-color: beige;
+
+.inicio {
+  grid-area: inicio;
+  justify-content: flex-start;
 }
-.inicio-lateral li a{
-    display: block;
-    font-family: "Roboto";
-    margin-right: 0.313em;
-    padding: 0.313em;
-    text-decoration: none;
-    background-color: beige;
+.inicio-lateral {
+  grid-area: inicio-lateral;
+  justify-content: flex-end;
 }
+
+.inicio li a,
+.inicio-lateral li a {
+  display: block;
+  font-family: "Atma", sans-serif;
+  padding: 0.4em 0.7em;
+  text-decoration: none;
+  background-color: beige;
+  white-space: nowrap;
+}
+
+
 .buscar{
   list-style-image: url(imagenes/buscar.png);
   margin-right: 1.5em;
