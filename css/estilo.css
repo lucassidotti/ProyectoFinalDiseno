@@ -14,12 +14,22 @@
     grid-template-columns: auto 1fr auto;
     height: 100%;
     padding: 1.2em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .cont-logo{
     display: grid;
     grid-area: cont-logo;
     justify-content: center;
     align-items: center;
+    animation-name: invi;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes invi{
+  0%{transform: translatey(-20px); opacity: 0;}
+  100%{transform: translatey(0px);opacity: 1;}
 }
 .logo{
   width: 400px;
@@ -45,13 +55,19 @@
     display: block;
     font-family: "Atma";
     text-decoration: none;
-    background-color: beige;
+    color: rgb(199, 154, 241)
+}
+.inicio li a:hover{
+  color: black;
+  transform: scale(1.1);
+  transition: color 0.5s ease-in-out;
 }
 .inicio-lateral li a{
     display: block;
     font-family: "Roboto";
     text-decoration: none;
     background-color: beige;
+    color: black;
 }
 
 .buscar input{
