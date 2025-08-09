@@ -14,3 +14,27 @@ CatHoverMain.forEach(imagen=>{
     imagen.src = original
   })
 })
+
+
+
+const cambiarFon=document.getElementById('cambiarFon');
+const body=document.body;
+const icono=document.getElementById('icono');
+
+body.classList.add('tema-claro');
+
+cambiarFon.addEventListener('click',function(){
+if(body.classList.contains('tema-claro')){
+    body.classList.remove('tema-claro');
+    body.classList.add('tema-oscuro');
+    icono.src='imagenes/sun.svg'
+    
+    
+}else{
+    body.classList.remove('tema-oscuro');
+    body.classList.add('tema-claro');
+    icono.src='imagenes/moon.svg'
+    
+}
+});
+

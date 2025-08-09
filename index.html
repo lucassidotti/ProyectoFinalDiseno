@@ -6,33 +6,61 @@
   <title>Giannini Kidswear</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="shortcut icon" href="imagenes/Gia.png" type="image/x-icon">
 </head>
 <body>
   <header class="encabezado rounded">
     <div class="cont-inicio">
-    <ul class="inicio">
-        <li><a href="">Descuentos</a></li>
-        <li><a href="">Temporada</a></li>
-        <li><a href="">Bebes</a></li>
-        <li><a href="">Niños</a></li>
-        <li><a href="">Niñas</a></li>
-    </ul>
+  <div class="btn-group">
+  <button type="button" class="btn ">Niños</button>
+  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="ninos-general.html">Niños 1-3 años</a></li>
+    <li><a class="dropdown-item" href="ninos-general.html">Niños 4-14 años</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn ">Niñas</button>
+  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="ninos-general.html">Niñas 1-3 años</a></li>
+    <li><a class="dropdown-item" href="ninos-general.html">Niñas 4-14 años</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn">Bebés</button>
+  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="ninos-general.html">Bebes niños</a></li>
+    <li><a class="dropdown-item" href="ninos-general.html">Bebes niñas</a></li>
+  </ul>
+</div>
     </div>
+
     <div class="cont-logo">
       <a href="#"><img src="imagenes/logo-alternativo.png" alt="giannini-logo"class="logo"></a>
     </div>
-    <div class="cont-lat">
+    <nav class="cont-lat">
     <ul class="inicio-lateral">
       <li class="buscar">
-        <label for="buscar"><i class="bi bi-search-heart-fill fs-3"></i></label>
+        <label for="buscar"><i class="bi bi-search-heart-fill fs-3 text-secondary-emphasis"></i></label>
         <input type="search" id="buscar" placeholder="¿Qué querés buscar?">
       </li>
-      <li class="cuenta"><a href="Registro.html"><i class="bi bi-person-heart fs-3 text-secondary-emphasis"></i></a></li>
+      <li class="cuenta"><a href="registro.html"><i class="bi bi-person-heart fs-3 text-secondary-emphasis"></i></a></li>
       <li class="carrito"><a href="#"><i class="bi bi-bag-heart-fill fs-3 text-secondary-emphasis"></i></a></li>
     </ul>
+    </nav>
+    <div class="dark-mode">
+    <button id="cambiarFon" class=" btn-color mt-3 rounded-circle">
+      <img id="icono" src="imagenes/moon.svg" alt="icono">
+    </button>
     </div>
   </header>
   <main>
@@ -52,24 +80,24 @@
         <div class="cont-p-cat"><p class="p-cat-general">Encontrá todo lo que tu bebé necesita: body, buzos, enteritos y mucho más!</p></div>
     </div>
     <div>
-  <a href=""><img src="imagenes/niña-4-14.jpg" alt="Niñas-4-14" class="img-cat" data-original="imagenes/niña-4-14.jpg" data-hover="imagenes/niña-4-14-bis.jpg"></a>
-        <div><p class="p-cat-general">Acompañamos a tu hija en cada momento de su vida con nuestra ropa. <br>Niñas 4-14 años</p></div>
+  <a href="ninos-general.html"><img src="imagenes/niña-1-3.jpg" alt="Niñas-1-3" class="img-cat"data-original="imagenes/niña-1-3.jpg" data-hover="imagenes/niña-1-3-bis.jpg"></a>
+      <div><p class="p-cat-general">Contamos con la mejor calidad para que tu hija se sienta cómoda. <br>Niñas 1-3 años</p></div>
     </div>
     <div>
-  <a href=""><img src="imagenes/niña-1-3.jpg" alt="Niñas-1-3" class="img-cat"data-original="imagenes/niña-1-3.jpg" data-hover="imagenes/niña-1-3-bis.jpg"></a>
-      <div><p class="p-cat-general">Contamos con la mejor calidad para que tu hija se sienta cómoda. <br>Niñas 1-3 años</p></div>
+  <a href="ninos-general.html"><img src="imagenes/niña-4-14.jpg" alt="Niñas-4-14" class="img-cat" data-original="imagenes/niña-4-14.jpg" data-hover="imagenes/niña-4-14-bis.jpg"></a>
+        <div><p class="p-cat-general">Acompañamos a tu hija en cada momento de su vida con nuestra ropa. <br>Niñas 4-14 años</p></div>
     </div>
   </div>
 </main>
 <div>
     <video autoplay muted loop playsinline><source src="videos/video2.mp4" type="video/mp4"></video>
   </div>
-<section class="favoritos">
+<section class="ofertas-ninas">
     <div class="cont-img-ofer"><img src="imagenes/banner.png" alt="ofertas" class="img-ofer"></div>
-</section>
-  <div class="cont-favs">
-    <div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-bebe.jpg" alt="fav-bebe" class="img-fav1"></a>
+
+  <div class="cont-ofers">
+    <div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/fav-bebe.jpg" alt="ofer-buzo" class="img-ofer1"></a>
   <div class="card-body">
     <h5 class="card-title">BUZO LUISIANA</h5>
     <p class="card-text">3 cuotas sin interés de $15.633</p>
@@ -79,8 +107,8 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-nina.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/fav-nina.jpg" alt="ofer-jumper" class="img-ofer2"></a>
   <div class="card-body">
     <h5 class="card-title">JUMPER NIÑA</h5>
     <p class="card-text">3 cuotas sin interés de $12.600</p>
@@ -90,10 +118,10 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-nino.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/ofer-1.jpg" alt="ofer-pijama" class="img-ofer3"></a>
   <div class="card-body">
-    <h5 class="card-title">CAMISA LEÑADOR</h5>
+    <h5 class="card-title">PIJAMA POLAR</h5>
     <p class="card-text">3 cuotas sin interés de $11.500</p>
     <p>$ 34.500</p>
     <a href="#" class="btn btn-primary">Comprar</a>
@@ -101,8 +129,8 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-bebe2.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/fav-bebe2.jpg" alt="ofer-buzo-beige" class="img-ofer4"></a>
   <div class="card-body">
     <h5 class="card-title">BUZO BEIGE</h5>
     <p class="card-text">3 cuotas sin interés de $10.000</p>
@@ -113,6 +141,7 @@
   </div>
 </div>
   </div>
+</section>
   <section class="publi">
     <div class="publi-content">
      💳 10% con Tarjeta X 💳 15% con Tarjeta Y  💳 20% con Tarjeta Z  💳 10% con Tarjeta X 💳 15% con Tarjeta Y 💳 20% con Tarjeta Z
@@ -124,25 +153,25 @@
       <p class="p-cat-general">Encontrá la ropa más linda y tierna para tu bebé.</p>
     </div>
     <div>
-  <a href=""><img src="imagenes/niño-4-14.jpeg" alt="Niños-4-14" class="img-cat" data-original="imagenes/niño-4-14.jpeg" data-hover="imagenes/niño-4-14-bis.jpg"></a>
-      <p class="p-cat-general">Conocé la ropa de niños con la mejor calidad para todas las actividades. <br>Niños 4-14 años</p>
+  <a href="ninos-general.html"><img src="imagenes/niño-1-3.jpg" alt="Niños-1-3" class="img-cat" data-original="imagenes/niño-1-3.jpg" data-hover="imagenes/niño-1-3-bis.jpg"></a>
+      <p class="p-cat-general">Moda para niños! Para que se sientan cómodos y seguros con cada diseño. <br>Niños 1-3 años</p>
     </div>
     <div>
-  <a href=""><img src="imagenes/niño-1-3.jpg" alt="Niños-1-3" class="img-cat" data-original="imagenes/niño-1-3.jpg" data-hover="imagenes/niño-1-3-bis.jpg"></a>
-      <p class="p-cat-general">Moda para niños! Para que se sientan cómodos y seguros con cada diseño. <br>Niños 1-3 años</p>
+  <a href="ninos-general.html"><img src="imagenes/niño-4-14.jpeg" alt="Niños-4-14" class="img-cat" data-original="imagenes/niño-4-14.jpeg" data-hover="imagenes/niño-4-14-bis.jpg"></a>
+      <p class="p-cat-general">Conocé la ropa de niños con la mejor calidad para todas las actividades. <br>Niños 4-14 años</p>
     </div>
   </div>
   <div>
     <video autoplay muted loop playsinline><source src="videos/video1.mp4" type="video/mp4"></video>
   </div>
-  <section class="favoritos">
+  <section class="ofertas-ninos">
     <div class="cont-img-ofer"><img src="imagenes/banner.png" alt="ofertas" class="img-ofer"></div>
-  </section>  
-  <div class="cont-favs">
-    <div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-bebe.jpg" alt="fav-bebe" class="img-fav1"></a>
+  
+  <div class="cont-ofers">
+    <div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/ofer-2.jpg" alt="ofer-body" class="img-ofer1"></a>
   <div class="card-body">
-    <h5 class="card-title">BUZO LUISIANA</h5>
+    <h5 class="card-title">BODY ADVENTURE</h5>
     <p class="card-text">3 cuotas sin interés de $15.633</p>
     <p>$ 46.900</p>
     <a href="#" class="btn btn-primary">Comprar</a>
@@ -150,10 +179,10 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-nina.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/ofer-3.jpg" alt="ofer-jogging" class="img-ofer2"></a>
   <div class="card-body">
-    <h5 class="card-title">JUMPER NIÑA</h5>
+    <h5 class="card-title">JOGGING JEAN STYLE</h5>
     <p class="card-text">3 cuotas sin interés de $12.600</p>
     <p>$ 37.800</p>
     <a href="#" class="btn btn-primary">Comprar</a>
@@ -161,8 +190,8 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-nino.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/fav-nino.jpg" alt="ofer-camisa" class="img-ofer3"></a>
   <div class="card-body">
     <h5 class="card-title">CAMISA LEÑADOR</h5>
     <p class="card-text">3 cuotas sin interés de $11.500</p>
@@ -172,10 +201,10 @@
 
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <a href="descripcion.html"><img src="imagenes/fav-bebe2.jpg" alt="fav-bebe" class="img-fav1"></a>
+<div class="card" style="width: 22rem;">
+    <a href="descripcion.html"><img src="imagenes/ofer-4.jpg" alt="ofer-zapatilla" class="img-ofer4"></a>
   <div class="card-body">
-    <h5 class="card-title">BUZO BEIGE</h5>
+    <h5 class="card-title">ZAPATILLA CELESTE</h5>
     <p class="card-text">3 cuotas sin interés de $10.000</p>
     <p>$ 30.000</p>
     <a href="#" class="btn btn-primary">Comprar</a>
@@ -184,6 +213,7 @@
   </div>
 </div>
   </div>
+  </section>
 <footer>
   <div class="footer-contenido">
     <div class="cont-nos">
@@ -210,8 +240,9 @@
     </div>
     <div class="cont-form">
       <form class="novedades">
-        <p>¡Conocé todas nuestras novedades!</p>
-        <p>¿Querés buenas ofertas y mucha inspiración?<br>Registrate en nuestro newsletter</p>
+        <span>¡Conocé todas nuestras novedades!</span>
+        <span>¿Querés buenas ofertas y mucha inspiración?</span>
+          <span>Registrate en nuestro newsletter</span>
         <div>
           <input type="checkbox" id="bebes"><label for="bebes">Bebés</label>
           <input type="checkbox" id="ninos"><label for="ninos">Niños</label>
@@ -248,8 +279,8 @@
 
 
 <script src="java/javascript.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
   

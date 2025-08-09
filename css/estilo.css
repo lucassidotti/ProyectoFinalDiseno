@@ -38,12 +38,10 @@
   max-width: 155px;
   height: auto;
 }
-.inicio{
-    display: flex;
-    list-style: none;
-    height: auto;
+.dropdown-menu{
     padding: 0;
     gap: 1em;
+    overflow: hidden;
 }
 
 .inicio-lateral{
@@ -54,15 +52,18 @@
   padding: 0;
   gap: 1em;
 }
-.inicio li a{
+.dropdown-menu li a{
     display: block;
     font-family: "Atma";
     text-decoration: none;
-    color: #333
+    color: #333;
+    
 }
-.inicio li a:hover{
+.dropdown-menu li a:hover{
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
+
+  
 }
 .inicio-lateral li a{
     display: block;
@@ -89,19 +90,57 @@
   overflow: hidden;
 }
 
+/*Modo oscuro*/
+.dark-mode{
+    position: absolute;
+    top: 4em;    
+    right: 1em;  
+    z-index: 1100;
+    
+}
+body.tema-claro{
+    background-color: whitesmoke;
+    color: black;
+}
+body.tema-oscuro{
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+.btn-color{
+    padding: 0.8em 1em;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.tema-claro .btn-color{
+    background-color: #e0e0e0;
+    color: black;
+}
+.tema-oscuro .btn-color{
+    background-color: #121212;
+    color: whitesmoke;
+}
+.btn-color img{
+  width: 30px;
+}
+/*Fin modo oscuro*/
+
 .contenedor-main{
   margin-top: 0.5em;
   display: flex;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   gap:0.5em;
   padding: 1em;
 }
 .img-cat{
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 1em;
   transition: opacity 0.3s ease-in-out;
+  display: block
 }
 
 
@@ -119,17 +158,22 @@
   width: 100%;
   height: 100%;
 }
-.cont-favs{
+.cont-ofers{
   width: 90%;
   margin: 0 auto;
   padding: 1.2em;
   justify-content: space-between;
   gap: 0.5em;
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
-.img-fav1, .img-fav2, .img-fav3, .img-fav4{
+.cont-ofers .card {
+  flex: 0 0 auto;
+  scroll-snap-align: start; 
+}
+.img-ofer1, .img-ofer2, .img-ofer3, .img-ofer4{
     width: 100%;
 }
 
@@ -157,30 +201,7 @@
         transform: translateX(-100%);
       }
     }
-.ofertas{
-  margin: 0 auto;
-  width: 100%;
-  height: 50px;
-  color: rgb(224, 202, 245);
-  text-align: center;
-  font-family: "Atma";
-  font-size: 20px;
-  text-shadow: -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-}
-.cont-ofertas{
-  margin-top: 0.5em;
-  gap: 5.9em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.img-ofer1, .img-ofer2, .img-ofer3, .img-ofer4{
-  border: 1px solid rgb(224, 202, 245);
-  display: flex;
-  width: 100%;
-}
+
 footer {
   background-color: #333;
   color: whitesmoke;
@@ -306,10 +327,22 @@ video{
   }
   .btn-rojo:hover , .btn-rosa:hover , .btn-amarillo:hover{
     transform: scale(1.1);
+    transition: 0.5s ease;
   }
   .talles{
     border-top: 1px solid black;
     margin-top: 0.5em;
+    
+    
+  }
+  .btn-s , .btn-m , .btn-l{
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto";
+  }
+  .btn-s:hover , .btn-m:hover , .btn-l:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
   }
   /*Final de los estilos page descripcion*/
 
@@ -373,15 +406,27 @@ video{
   .inicio-lateral{
     width: 100%;
   }
-  .inicio{
+  .cont-inicio{
     display: none;
+  }
+  .dark-mode{
+    position: absolute;
+    top: 7em;    
+    right: 1em;  
+    z-index: 1100;
+  }
+  .btn-color img{
+    width: 1.2em;
   }
   video {
     display: block;
     width: 100%;
     border-radius: 12px;
   }
-
+  .contenedor-main{
+    flex-wrap: wrap;
+    flex-wrap: 1 1 auto;
+  }
   .footer-contenido {
     flex-direction: column;
     align-items: center;
@@ -406,5 +451,30 @@ video{
 
   .boton-form {
     width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+  .encabezado{
+    display: flex;
+    flex-wrap:wrap;
+    height: 150px;
+    justify-content: center;
+    gap: 0.1em;
+  }
+  .cont-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .inicio-lateral{
+    width: 100%;
+  }
+  .cont-inicio{
+    display: none;
+  }
+  .novedades{
+    text-align: center;
   }
 }
