@@ -16,7 +16,7 @@ CatHoverMain.forEach(imagen=>{
 })
 
 
-
+//Dark mode
 const cambiarFon=document.getElementById('cambiarFon');
 const body=document.body;
 const icono=document.getElementById('icono');
