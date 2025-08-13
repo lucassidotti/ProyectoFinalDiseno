@@ -38,21 +38,14 @@
   max-width: 155px;
   height: auto;
 }
-
+.btn{
+  font-family: "Atma";
+}
 .dropdown-menu {
   padding: 0;
   gap: 1em;
   overflow: hidden;
-}
-
-.inicio-lateral {
-  display: flex;
-  list-style: none;
-  height: auto;
-  justify-content: flex-end;
-  padding: 0;
-  gap: 1em;
-}
+} 
 
 .dropdown-menu li a {
   display: block;
@@ -64,6 +57,15 @@
 .dropdown-menu li a:hover {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
+}
+
+.inicio-lateral {
+  display: flex;
+  list-style: none;
+  height: auto;
+  justify-content: flex-end;
+  padding: 0;
+  gap: 1em;
 }
 
 .inicio-lateral li a {
@@ -94,12 +96,6 @@
 }
 
 /* Modo oscuro */
-.dark-mode {
-  position: absolute;
-  top: 4em;
-  right: 1em;
-  z-index: 1100;
-}
 
 body.tema-claro {
   background-color: whitesmoke;
@@ -112,9 +108,10 @@ body.tema-oscuro {
 }
 
 .btn-color {
-  padding: 0.8em 1em;
+  padding: 0.8em;
   border: none;
   cursor: pointer;
+  width: 50px;
 }
 
 .tema-claro .btn-color {
@@ -128,7 +125,7 @@ body.tema-oscuro {
 }
 
 .btn-color img {
-  width: 30px;
+  width: 100%;
 }
 /* Fin modo oscuro */
 
@@ -412,14 +409,11 @@ video {
   .cont-inicio {
     display: none;
   }
-  .dark-mode {
-    position: absolute;
-    top: 7em;
-    right: 1em;
-    z-index: 1100;
+  .btn-color{
+    width: 50px;
   }
   .btn-color img {
-    width: 1.2em;
+    width: 100%;
   }
   video {
     display: block;
