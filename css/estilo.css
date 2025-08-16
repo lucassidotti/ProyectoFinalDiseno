@@ -481,6 +481,15 @@ video {
   .cont-inicio {
     display: none;
   }
+   .img-ofer {
+  width: 100%;
+  display: none;
+  
+}
+.img-ofer-cel{
+  width: 100%;
+  display: block;
+}
   .novedades {
     text-align: center;
   }
