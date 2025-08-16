@@ -160,7 +160,11 @@ body.tema-oscuro {
 
 .img-ofer {
   width: 100%;
-  height: 100%;
+  display: block;
+}
+.img-ofer-cel{
+  width: 100%;
+  display: none;
 }
 
 .cont-ofers {
@@ -359,6 +363,7 @@ video {
 .cuerpo-login {
   background-image: url(imagenes/background.png);
 }
+
 .form-container {
   background-color: rgba(233, 221, 221, 0.08);
   padding: 2rem;
@@ -420,6 +425,15 @@ video {
     width: 100%;
     border-radius: 12px;
   }
+  .img-ofer {
+  width: 100%;
+  display: none;
+  
+}
+.img-ofer-cel{
+  width: 100%;
+  display: block;
+}
   .contenedor-main {
     flex-wrap: wrap;
     flex-wrap: 1 1 auto;

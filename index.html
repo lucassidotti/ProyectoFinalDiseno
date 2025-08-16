@@ -65,7 +65,13 @@
           <input type="search" id="buscar" placeholder="¿Qué querés buscar?">
         </li>
         <li class="cuenta">
-          <a href="registro.html"><i class="bi bi-person-heart fs-3 text-secondary-emphasis"></i></a>
+          <a href="registro.html"
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasRight1" 
+            aria-controls="offcanvasRight">
+
+            <i class="bi bi-person-heart fs-3 text-secondary-emphasis"></i>
+          </a>
         </li>
         <li class="carrito">
           <a href="#" 
@@ -77,7 +83,33 @@
         </li>
       </ul>
     </nav>
-
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+      <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="container d-flex justify-content-center align-items-center mb-2">
+    <div class="form-container">
+      <h4 class="mb-4 text-center text-dark">Tu cuenta!</h4>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label text-dark">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label text-dark">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Tu contraseña segura" maxlength="8">
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Ingresa</button> <br>
+          <a href="registro.html">¿No tenés cuenta? ¡Registrate!</a>
+        </div>
+      </form>
+    </div>
+  </div>
+    </div>
+  </div>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-box2-heart-fill"></i> Tu carrito!</h5>
@@ -139,7 +171,8 @@
 
   <section class="ofertas-ninas">
     <div class="cont-img-ofer">
-      <img src="imagenes/banner.png" alt="ofertas" class="img-ofer">
+      <img src="imagenes/bannercpuna.png" alt="ofertas" class="img-ofer">
+      <img src="imagenes/bannercelna.png" alt="ofertas-cel-nena" class="img-ofer-cel">
     </div>
 
     <section class="publi">
@@ -220,7 +253,8 @@
 
   <section class="ofertas-ninos">
     <div class="cont-img-ofer">
-      <img src="imagenes/banner.png" alt="ofertas" class="img-ofer">
+      <img src="imagenes/bannercpu.png" alt="ofertas" class="img-ofer">
+      <img src="imagenes/bannercelnn.png" alt="ofertas-cel" class="img-ofer-cel">
     </div>
 
     <section class="publi">
