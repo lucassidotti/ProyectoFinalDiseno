@@ -93,6 +93,7 @@
 .carousel-item {
   transition: transform 1.5s ease-in-out;
   overflow: hidden;
+  max-height: 87vh;
 }
 
 /* Modo oscuro */
@@ -366,19 +367,19 @@ video {
 
 .form-container {
   background-color: rgba(233, 221, 221, 0.08);
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 2em;
+  border-radius: 1em;
   max-width: 400px;
-  margin: auto;
-  margin-top: 10vh;
+  margin: 0 auto;
+  margin-top: 2.3em;
+  margin-bottom: 2em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(100px);
+  background-color: rgb(226, 226, 209);
   color: #ffffff;
 }
 .form-control {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #555;
-  color: #fff;
 }
 .form-control::placeholder {
   color: #333;
@@ -386,12 +387,49 @@ video {
 .btn-primary {
   background-color: #343a40;
   border-color: #343a40;
+  margin-bottom: 1em;
 }
 .btn-primary:hover {
   background-color: #212529;
   border-color: #212529;
 }
 /* Final de los estilos login */
+
+/* Pop-up formRegistro*/
+.nuevo-div{
+    width: 400px;
+    min-height: 600px;
+    background-image: url(imagenes/Bienvenido.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 2em;
+}
+.nuevo-div a{
+    text-align: center;
+    font-family: 'Nunito';
+    margin: 0 auto;
+    margin-top: auto;
+    width: 50%;
+    display: block;
+    text-decoration: none;
+    background-color: #8fb330;
+    border-radius: 12px;
+    padding: 0.5em;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 1em;
+}
+/* fin estilos pop-up formRegistro*/
 
 /* Responsive */
 @media(max-width: 600px) {

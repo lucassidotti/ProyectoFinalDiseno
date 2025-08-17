@@ -37,4 +37,79 @@ if(body.classList.contains('tema-claro')){
     
 }
 });
+//dark mode
 
+// Validar formRegistro//
+const formRegistro=document.getElementById('formRegistro');
+const nombreRegistro=document.getElementById('nombreRegistro');
+const passRegistro=document.getElementById('passRegistro');
+const emailRegistro=document.getElementById('emailRegistro');
+const dniRegistro=document.getElementById('dniRegistro');
+const telRegistro=document.getElementById('telRegistro');
+const errorName=document.getElementById('errorName');
+const errorEmail=document.getElementById('errorEmail')
+const errorDni=document.getElementById('errorDni')
+const errorTel=document.getElementById('errorTel')
+const errorPass=document.getElementById('errorPass')
+const nuevoDiv=document.createElement('div');
+const nuevoLink=document.createElement('a');
+const formContainer=document.querySelector('.form-container');
+formRegistro.addEventListener('submit',function(evento){
+    evento.preventDefault();
+    errorName.innerText='';
+    errorPass.innerText='';
+    errorEmail.innerText='';
+    errorTel.innerText='';
+    errorDni.innerText='';
+    if(nombreRegistro.value===''){
+        errorName.innerText='Ingrese su Nombre';
+        errorName.style.color='red';
+    }else if(emailRegistro.value===''){
+        errorEmail.innerText='Ingrese su E-mail';
+        errorEmail.style.color='red';
+    }else if(dniRegistro.value===''){
+        errorDni.innerText='Ingrese su N° de DNI';
+        errorDni.style.color='red';
+    }else if(telRegistro.value===''){
+        errorTel.innerText='Ingrese su N° de Telefono';
+        errorTel.style.color='red';
+    }else if(passRegistro.value===''){
+        errorPass.innerText='Ingrese su Contraseña';
+        errorPass.style.color='red';
+    }
+    else{
+        nuevoLink.innerText='¡Ir al sitio..!';
+        nuevoLink.href='/index.html'
+        nuevoDiv.classList.add('nuevo-div');
+        nuevoDiv.appendChild(nuevoLink);
+        formContainer.appendChild(nuevoDiv);
+    }
+});
+//Final validacion formRegistro
+
+//Validar formLogin// 
+/*
+const formLogin=document.getElementById('formLogin');
+const nombreLog=document.getElementById('nombreLog');
+const passLog=document.getElementById('passLog')
+const errorNameLog=document.getElementById('errorNameLog');
+const errorPassLog=document.getElementById('errorPassLog');
+const correctoLog=document.getElementById('correctoLog')
+formLogin.addEventListener('submit',function(evento){
+    evento.preventDefault();
+    errorNameLog.innerText='';
+    errorPassLog.innerText='';
+    if(nombreLog.value===''){
+        errorNameLog.innerText='Ingrese su nombre';
+        errorNameLog.style.color='red';
+    }
+    else if(passLog.value===''){
+        errorPassLog.innerText='Ingrese su Contraseña';
+        errorPassLog.style.color='red';
+    }else{
+      correctoLog.innerText='Sus datos son correctos'
+      correctoLog.style.color='green'
+    }
+});
+//Fin validar formLogin
+*/
