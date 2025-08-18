@@ -407,7 +407,7 @@ video {
 /* Pop-up formRegistro*/
 .nuevo-div{
     width: 400px;
-    min-height: 600px;
+    height: 100vh;
     background-image: url(imagenes/Bienvenido.png);
     background-repeat: no-repeat;
     background-position: center;
