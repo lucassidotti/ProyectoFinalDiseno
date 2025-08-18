@@ -441,7 +441,7 @@ video {
 /* fin estilos pop-up formRegistro*/
 
 /* Responsive */
-@media(max-width: 600px) {
+@media(max-width: 768px) {
   .encabezado {
     display: flex;
     flex-wrap: wrap;
@@ -520,7 +520,7 @@ video {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .encabezado {
     display: flex;
     flex-wrap: wrap;
