@@ -51,9 +51,6 @@ const errorEmail=document.getElementById('errorEmail')
 const errorDni=document.getElementById('errorDni')
 const errorTel=document.getElementById('errorTel')
 const errorPass=document.getElementById('errorPass')
-const nuevoDiv=document.createElement('div');
-const nuevoLink=document.createElement('a');
-const formContainer=document.querySelector('.form-container');
 formRegistro.addEventListener('submit',function(evento){
     evento.preventDefault();
     errorName.innerText='';
@@ -77,13 +74,15 @@ formRegistro.addEventListener('submit',function(evento){
         errorPass.innerText='Ingrese su Contraseña';
         errorPass.style.color='red';
     }
-    else{
-        nuevoLink.innerText='¡Ir al sitio..!';
-        nuevoLink.href='/index.html'
-        nuevoDiv.classList.add('nuevo-div');
-        nuevoDiv.appendChild(nuevoLink);
-        formContainer.appendChild(nuevoDiv);
-    }
+    else {
+      Swal.fire({
+      title: "¡Bienvenido a Giannini Kidswear!",
+      text: "Gracias por registrarse.",
+      icon: "success",
+      draggable: true,
+      confirmButtonText: '<a href="/index.html" style="color: white; text-decoration: none;">Ir al sitio</a>'
+  });
+}
 });
 //Final validacion formRegistro
 
