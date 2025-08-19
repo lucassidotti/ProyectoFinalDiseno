@@ -80,7 +80,7 @@ formRegistro.addEventListener('submit',function(evento){
       text: "Gracias por registrarse.",
       icon: "success",
       draggable: true,
-      confirmButtonText: '<a href="/index.html" style="color: white; text-decoration: none;">Ir al sitio</a>'
+      confirmButtonText: '<a href="index.html" style="color: white; text-decoration: none;">Ir al sitio</a>'
   });
 }
 });
