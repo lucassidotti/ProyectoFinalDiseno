@@ -1,3 +1,45 @@
+const offcanva=document.createElement('div');
+const offcanvaHeader=document.createElement('div');
+const offcanvaTitle=document.createElement('h5');
+const offcanvaCerrar=document.createElement('button');
+const offcanvaBody=document.createElement('div');
+const cartItems=document.createElement('div');
+const buyBtn=document.createElement('button');
+
+
+offcanva.setAttribute('class','offcanvas offcanvas-end');
+offcanva.setAttribute('tabindex','-1');
+offcanva.setAttribute('id','offcanvasRight');
+offcanva.setAttribute('aria-labelledby','offcanvasRightLabel');
+document.body.appendChild(offcanva);
+
+offcanvaHeader.setAttribute('class','offcanvas-header');
+offcanva.appendChild(offcanvaHeader);
+
+offcanvaTitle.setAttribute('class','offcanvas-title');
+offcanvaTitle.setAttribute('id','offcanvasRightLabel');
+offcanvaTitle.textContent='Tu carrito';
+offcanvaHeader.appendChild(offcanvaTitle);
+
+offcanvaCerrar.setAttribute('type','button');
+offcanvaCerrar.setAttribute('class','btn-close');
+offcanvaCerrar.setAttribute('data-bs-dismiss','offcanvas');
+offcanvaCerrar.setAttribute('aria-label','close')
+offcanvaHeader.appendChild(offcanvaCerrar);
+
+offcanvaBody.setAttribute('class','offcanvas-body d-flex flex-column');
+offcanva.appendChild(offcanvaBody);
+
+cartItems.setAttribute('id','cart-items');
+cartItems.setAttribute('class','mb-3');
+offcanvaBody.appendChild(cartItems);
+
+buyBtn.setAttribute('id','buy-btn');
+buyBtn.setAttribute('class','btn btn-success mt-auto');
+buyBtn.textContent='Comprar';
+offcanvaBody.appendChild(buyBtn);
+
+
 // Esto toma todas las imagenes con el class "img-cat" a las que le puse el data en el html
 const CatHoverMain = document.querySelectorAll(".img-cat");
 //Recorre las imagenes para aplicar el efecto hover. Se puede hacer con un "for" pero con "forEach" es mas limpio
