@@ -13,6 +13,7 @@
 </head>
 <body>
   <header class="encabezado rounded">
+    <h1 class="visually-hidden">Giannini Kidswear</h1>
     <div class="cont-inicio">
       <div class="btn-group">
         <button type="button" class="btn">Niños</button>
@@ -63,7 +64,8 @@
           <a href="registro.html"
             data-bs-toggle="offcanvas" 
             data-bs-target="#offcanvasRight1" 
-            aria-controls="offcanvasRight">
+            aria-controls="offcanvasRight"
+            aria-label="Mi cuenta">
 
             <i class="bi bi-person-heart fs-3 text-secondary-emphasis"></i>
           </a>
@@ -72,7 +74,8 @@
           <a href="#" 
             data-bs-toggle="offcanvas" 
             data-bs-target="#offcanvasRight" 
-            aria-controls="offcanvasRight">
+            aria-controls="offcanvasRight"
+            aria-label="Carrito">
             <i class="bi bi-bag-heart-fill fs-3 text-secondary-emphasis"></i>
           </a>
         </li>
@@ -157,7 +160,7 @@
   </main>
 
   <div>
-    <video autoplay muted loop playsinline>
+    <video aria-label="Video promo niñas" autoplay muted loop playsinline>
       <source src="videos/video2.mp4" type="video/mp4">
     </video>
   </div>
@@ -239,7 +242,7 @@
   </div>
 
   <div>
-    <video autoplay muted loop playsinline>
+    <video aria-label="Video promo niños" autoplay muted loop playsinline>
       <source src="videos/video1.mp4" type="video/mp4">
     </video>
   </div>
@@ -340,7 +343,8 @@
             <input type="checkbox" id="ninas"><label for="ninas">Niñas</label>
           </div>
           <div class="mail-cont">
-            <input type="email" placeholder="Ingresá tu mail" disabled>
+            <label for="email" class="visually-hidden"></label>
+            <input type="email" placeholder="Ingresá tu mail" >
           </div>
           <div>
             <input type="submit" class="boton-form" value="Confirmar">
