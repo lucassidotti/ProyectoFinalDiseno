@@ -40,6 +40,127 @@ buyBtn.textContent='Comprar';
 offcanvaBody.appendChild(buyBtn);
 
 
+const contDin=document.getElementById('contenedorDinamico');
+const sobreNosotros=document.getElementById('sobreNosotros');
+
+sobreNosotros.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const sobreNosTitle=document.createElement('h2');
+    sobreNosTitle.innerText='Sobre nosotros...'
+    sobreNosTitle.style.textAlign='center'
+  const sobreNosP=document.createElement('p');
+    sobreNosP.innerText='Esta página fue creada desde cero por un estudiante de diseño web con el objetivo de aprender cada día más. Giannini Kidswear nace de una inspiración que me motiva a explorar y crear experiencias web únicas. ¡Espero que disfruten navegando por la página!'
+    sobreNosP.style.textAlign='justify'
+    contDin.appendChild(sobreNosTitle);
+    contDin.appendChild(sobreNosP);
+    contDin.style.display='block'
+    contDin.scrollIntoView({ behavior:'smooth'});
+});
+
+const faq=document.getElementById('faq')
+faq.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const faqTitle=document.createElement('h2');
+    faqTitle.innerText='Preguntas frecuentes...'
+    faqTitle.style.textAlign='center'
+  const faqList=document.createElement('ul');
+  const q1=document.createElement('li');
+    q1.innerHTML='<strong>¿Se puede comprar algo?<br>Ojala...Porque me vendrian bien unos mangos'
+    faqList.appendChild(q1);
+  const q2=document.createElement('li');
+    q2.innerHTML='<strong>¿Hacen envios?<br>Si, pero solo dentro del edificio Matilda'
+    faqList.appendChild(q2);
+  contDin.appendChild(faqTitle);
+  contDin.appendChild(faqList)
+  contDin.style.display='block'
+  contDin.scrollIntoView({behavior:'smooth'});
+});
+
+
+const comoComprar=document.getElementById('comoComprar');
+comoComprar.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const comprarTitle=document.createElement('h2');
+    comprarTitle.innerText='¿Como comprar?'
+    comprarTitle.style.textAlign='center'
+  const comprarP=document.createElement('p');
+    comprarP.innerText='Todavia no podes comprar nada... '
+    comprarP.style.textAlign='justify'
+  contDin.appendChild(comprarTitle);
+  contDin.appendChild(comprarP);
+  contDin.style.display='block'
+  contDin.scrollIntoView({behavior:'smooth'})
+});
+
+
+
+const buscar=document.getElementById('buscar');
+buscar.addEventListener('click',()=>{
+iziToast.show({
+    title: 'Mmmm...',
+    message: 'Esto no lo sé hacer todavía.',
+    image: 'https://i.ibb.co/8pxzpfw/nombre-de-la-imagen.png',
+    imageWidth: 100,
+    imageHeight: 100,
+    position: 'topRight'
+});
+});
+
+function noSeHacerlo(){
+iziToast.show({
+    title: 'Mmmm...',
+    message: 'Esto no lo sé hacer todavía.',
+    image: 'https://i.ibb.co/8pxzpfw/nombre-de-la-imagen.png',
+    imageWidth: 100,
+    imageHeight: 100,
+    position: 'topRight'
+});
+}
+
+const btnComprar=document.querySelectorAll('.comprar');
+btnComprar.forEach(botonComp=>{
+  botonComp.addEventListener('click', noSeHacerlo);
+});
+
+const btnAgregar=document.querySelectorAll('.agregar');
+btnAgregar.forEach(botonAgr=>{
+  botonAgr.addEventListener('click',noSeHacerlo)
+});
+
+//Validar formLogin// 
+const formLogin=document.getElementById('formLogin');
+const nombreLog=document.getElementById('nombreLog');
+const passLog=document.getElementById('passLog')
+const errorNameLog=document.getElementById('errorNameLog');
+const errorPassLog=document.getElementById('errorPassLog');
+const correctoLog=document.getElementById('correctoLog')
+const btnLogin=document.getElementById('btnLogin')
+btnLogin.addEventListener('click',function(){
+    errorNameLog.innerText='';
+    errorPassLog.innerText='';
+    if(nombreLog.value===''){
+        errorNameLog.innerText='Ingrese su nombre';
+        errorNameLog.style.color='red';
+    }
+    else if(passLog.value===''){
+        errorPassLog.innerText='Ingrese su Contraseña';
+        errorPassLog.style.color='red';
+    }else{
+    iziToast.success({
+    title:'¡Bienvenido '+nombreLog.value+'!',
+    onOpening:function(){
+        const btnCerrarLog=document.querySelector('#offcanvasRight1 .btn-close');
+        if (btnCerrarLog) btnCerrarLog.click();
+    }
+});
+    }
+});
+//Fin validar formLogin
+
+
 // Esto toma todas las imagenes con el class "img-cat" a las que le puse el data en el html
 const CatHoverMain = document.querySelectorAll(".img-cat");
 //Recorre las imagenes para aplicar el efecto hover. Se puede hacer con un "for" pero con "forEach" es mas limpio
@@ -53,9 +174,9 @@ CatHoverMain.forEach(imagen=>{
   });
 // Cuando se saca el mouse del marco de la imagen, vuelve a la imagen original
   imagen.addEventListener("mouseleave",()=>{
-    imagen.src = original
+    imagen.src = original;
   })
-})
+});
 
 
 //Dark mode
@@ -69,88 +190,51 @@ cambiarFon.addEventListener('click',function(){
 if(body.classList.contains('tema-claro')){
     body.classList.remove('tema-claro');
     body.classList.add('tema-oscuro');
-    icono.src='imagenes/sun.svg'
+    icono.src='imagenes/sun.svg';
     
     
 }else{
     body.classList.remove('tema-oscuro');
     body.classList.add('tema-claro');
-    icono.src='imagenes/moon.svg'
+    icono.src='imagenes/moon.svg';
     
 }
 });
 //dark mode
 
-// Validar formRegistro//
-const formRegistro=document.getElementById('formRegistro');
-const nombreRegistro=document.getElementById('nombreRegistro');
-const passRegistro=document.getElementById('passRegistro');
-const emailRegistro=document.getElementById('emailRegistro');
-const dniRegistro=document.getElementById('dniRegistro');
-const telRegistro=document.getElementById('telRegistro');
-const errorName=document.getElementById('errorName');
-const errorEmail=document.getElementById('errorEmail')
-const errorDni=document.getElementById('errorDni')
-const errorTel=document.getElementById('errorTel')
-const errorPass=document.getElementById('errorPass')
-formRegistro.addEventListener('submit',function(evento){
-    evento.preventDefault();
-    errorName.innerText='';
-    errorPass.innerText='';
-    errorEmail.innerText='';
-    errorTel.innerText='';
-    errorDni.innerText='';
-    if(nombreRegistro.value===''){
-        errorName.innerText='Ingrese su Nombre';
-        errorName.style.color='red';
-    }else if(emailRegistro.value===''){
-        errorEmail.innerText='Ingrese su E-mail';
-        errorEmail.style.color='red';
-    }else if(dniRegistro.value===''){
-        errorDni.innerText='Ingrese su N° de DNI';
-        errorDni.style.color='red';
-    }else if(telRegistro.value===''){
-        errorTel.innerText='Ingrese su N° de Telefono';
-        errorTel.style.color='red';
-    }else if(passRegistro.value===''){
-        errorPass.innerText='Ingrese su Contraseña';
-        errorPass.style.color='red';
-    }
-    else {
-      Swal.fire({
-      title: "¡Bienvenido a Giannini Kidswear!",
-      text: "Gracias por registrarse.",
-      icon: "success",
-      draggable: true,
-      confirmButtonText: '<a href="index.html" style="color: white; text-decoration: none;">Ir al sitio</a>'
-  });
-}
-});
-//Final validacion formRegistro
+// cambiar colores y elegir talles
 
-//Validar formLogin// 
-/*
-const formLogin=document.getElementById('formLogin');
-const nombreLog=document.getElementById('nombreLog');
-const passLog=document.getElementById('passLog')
-const errorNameLog=document.getElementById('errorNameLog');
-const errorPassLog=document.getElementById('errorPassLog');
-const correctoLog=document.getElementById('correctoLog')
-formLogin.addEventListener('submit',function(evento){
-    evento.preventDefault();
-    errorNameLog.innerText='';
-    errorPassLog.innerText='';
-    if(nombreLog.value===''){
-        errorNameLog.innerText='Ingrese su nombre';
-        errorNameLog.style.color='red';
-    }
-    else if(passLog.value===''){
-        errorPassLog.innerText='Ingrese su Contraseña';
-        errorPassLog.style.color='red';
-    }else{
-      correctoLog.innerText='Sus datos son correctos'
-      correctoLog.style.color='green'
-    }
+const btnRojo=document.getElementById('btnRojo');
+const btnRosa=document.getElementById('btnRosa');
+const btnAmarillo=document.getElementById('btnAmarillo');
+const colorElegido=document.getElementById('colorElegido');
+
+btnRojo.addEventListener('click',()=>{
+  colorElegido.innerText='Color Rojo seleccionado'
 });
-//Fin validar formLogin
-*/
+btnRosa.addEventListener('click',()=>{
+  colorElegido.innerText='Color Rosa seleccionado'
+});
+btnAmarillo.addEventListener('click',()=>{
+  colorElegido.innerText='Color Amarillo seleccionado'
+});
+
+
+const btnTalleS=document.getElementById('talleS');
+const btnTalleM=document.getElementById('talleM');
+const btnTalleL=document.getElementById('talleL');
+const talleElegido=document.getElementById('talleElegido');
+
+btnTalleS.addEventListener('click',()=>{
+  talleElegido.innerText='Talle S seleccionado'
+});
+btnTalleM.addEventListener('click',()=>{
+  talleElegido.innerText='Talle M seleccionado'
+});
+btnTalleL.addEventListener('click',()=>{
+  talleElegido.innerText='Talle L seleccionado'
+});
+// cambiar colores y elegir talles
+
+
+
