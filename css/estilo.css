@@ -507,6 +507,25 @@ a.disabled {
   .btn-color img {
     width: 100%;
   }
+  .a-cat-general  {
+  text-align: center;
+  margin-top: 0.5em;
+  font-family: "Atma";
+  font-size: 20px;
+}
+.cont-a-cat{
+  text-align: center;
+  
+}
+.cont-a-cat a {
+  text-decoration: none;
+  color: black;
+  
+}
+.subrayado{
+  font-family: 'Atma';
+  text-decoration: underline;
+}
   video {
     display: block;
     width: 100%;
@@ -529,8 +548,6 @@ a.disabled {
   width: 100%;
   height: auto;
 }
-
-
   .footer-contenido {
     flex-direction: column;
     align-items: center;
@@ -589,7 +606,25 @@ a.disabled {
    .img-ofer {
   width: 100%;
   display: none;
+}
+.a-cat-general  {
+  text-align: center;
+  margin-top: 0.5em;
+  font-family: "Atma";
+  font-size: 20px;
+}
+.cont-a-cat{
+  text-align: center;
   
+}
+.cont-a-cat a {
+  text-decoration: none;
+  color: black;
+  
+}
+.subrayado{
+  font-family: 'Atma';
+  text-decoration: underline;
 }
 .img-ofer-cel{
   width: 100%;

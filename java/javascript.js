@@ -134,13 +134,16 @@ btnAgregar.forEach(botonAgr=>{
 //Hover con click descripcion
 const hoverDesc = document.querySelector('.img-desc');
 
-hoverDesc.addEventListener('click',()=>{
-  if (hoverDesc.src.includes("fav-bebe.png")){
+function imagenToggle(){
+  if(hoverDesc.src.includes("fav-bebe.png")){
     hoverDesc.src = "imagenes/fav-bebe-hover.png";
   }else{
     hoverDesc.src = "imagenes/fav-bebe.png";
   }
-});
+}
+hoverDesc.addEventListener('click',imagenToggle);
+
+
 
 
 //Validar formLogin// 
