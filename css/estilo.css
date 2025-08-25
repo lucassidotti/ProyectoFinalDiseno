@@ -117,6 +117,9 @@ body.tema-oscuro {
   background-color: #121212;
   color: whitesmoke;
 }
+body.tema-oscuro a{
+  color: whitesmoke;
+}
 
 .btn-color {
   padding: 0.8em;
@@ -156,13 +159,25 @@ body.tema-oscuro {
   display: block;
 }
 
-.p-cat-general {
+.a-cat-general  {
   text-align: center;
   margin-top: 0.5em;
   font-family: "Atma";
   font-size: 20px;
 }
-
+.cont-a-cat{
+  text-align: center;
+  
+}
+.cont-a-cat a {
+  text-decoration: none;
+  color: black;
+  
+}
+.subrayado{
+  font-family: 'Atma';
+  text-decoration: underline;
+}
 .cont-img-ofer {
   width: 100%;
   height: auto;
