@@ -101,10 +101,13 @@
 .carousel-item {
   padding: 0;
   margin: 0;
-  transition: transform 1.5s ease-in-out;
   overflow: hidden;
   height: 100vh;
 }
+.carousel-fade .carousel-item {
+  transition: opacity 1.5s ease-in-out;
+}
+
 
 /* Modo oscuro */
 
@@ -379,16 +382,8 @@ a.disabled {
   width: 100%;
   height: auto;
 }
-.descripcion-carusel{
-  margin: 0;
-  padding: 0;
-  
-}
-.descripcion-carusel .carousel-control-prev, .descripcion-carusel .carousel-control-next{
-  top: 50%;
-  
-  transform: translateY(-50%);
-}
+
+
 .col-md-4 {
   max-width: 400px;
   margin: 0 auto;
@@ -581,6 +576,7 @@ a.disabled {
     justify-content: center;
     gap: 0.1em;
   }
+  
   .cont-logo {
     display: flex;
     justify-content: center;
