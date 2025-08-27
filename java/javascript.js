@@ -1,3 +1,5 @@
+// Esto agrega un offcanva clonado totalmente de Boostrap
+
 const offcanva=document.createElement('div');
 const offcanvaHeader=document.createElement('div');
 const offcanvaTitle=document.createElement('h5');
@@ -35,10 +37,13 @@ cartItems.setAttribute('class','mb-3');
 offcanvaBody.appendChild(cartItems);
 
 buyBtn.setAttribute('id','buy-btn');
-buyBtn.setAttribute('class','btn btn-success mt-auto');
+buyBtn.setAttribute('class','btn btn-success mt-auto comprar');
 buyBtn.textContent='Comprar';
 offcanvaBody.appendChild(buyBtn);
+// Esto agrega un offcanva clonado totalmente de Boostrap
 
+
+// contenedor dinamico para descripcion footer
 
 const contDin=document.getElementById('contenedorDinamico');
 const sobreNosotros=document.getElementById('sobreNosotros');
@@ -55,8 +60,9 @@ sobreNosotros.addEventListener('click',(e)=>{
     contDin.appendChild(sobreNosTitle);
     contDin.appendChild(sobreNosP);
     contDin.style.display='block'
-    contDin.scrollIntoView({ behavior:'smooth'});
+    contDin.scrollIntoView({ behavior:'smooth',block:'start'});
 });
+
 
 const faq=document.getElementById('faq')
 faq.addEventListener('click',(e)=>{
@@ -75,7 +81,7 @@ faq.addEventListener('click',(e)=>{
   contDin.appendChild(faqTitle);
   contDin.appendChild(faqList)
   contDin.style.display='block'
-  contDin.scrollIntoView({behavior:'smooth'});
+  contDin.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
 
@@ -92,22 +98,12 @@ comoComprar.addEventListener('click',(e)=>{
   contDin.appendChild(comprarTitle);
   contDin.appendChild(comprarP);
   contDin.style.display='block'
-  contDin.scrollIntoView({behavior:'smooth'})
+  contDin.scrollIntoView({behavior:'smooth',block:'start'})
 });
+// contenedor dinamico para descripcion footer
 
 
-
-const buscar=document.getElementById('buscar');
-buscar.addEventListener('click',()=>{
-iziToast.show({
-    title: 'Mmmm...',
-    message: 'Esto no lo sé hacer todavía.',
-    image: 'https://i.ibb.co/8pxzpfw/nombre-de-la-imagen.png',
-    imageWidth: 100,
-    imageHeight: 100,
-    position: 'topRight'
-});
-});
+//Probando iziToast y practicando forEach
 
 function noSeHacerlo(){
 iziToast.show({
@@ -120,6 +116,9 @@ iziToast.show({
 });
 }
 
+const buscar=document.getElementById('buscar');
+buscar.addEventListener('click',noSeHacerlo);
+
 const btnComprar=document.querySelectorAll('.comprar');
 btnComprar.forEach(botonComp=>{
   botonComp.addEventListener('click', noSeHacerlo);
@@ -129,24 +128,11 @@ const btnAgregar=document.querySelectorAll('.agregar');
 btnAgregar.forEach(botonAgr=>{
   botonAgr.addEventListener('click',noSeHacerlo)
 });
+//Probando iziToast y practicando forEach
 
 
-//Hover con click descripcion
-const hoverDesc = document.querySelector('.img-desc');
+//Validar formLogin
 
-function imagenToggle(){
-  if(hoverDesc.src.includes("fav-bebe.png")){
-    hoverDesc.src = "imagenes/fav-bebe-hover.png";
-  }else{
-    hoverDesc.src = "imagenes/fav-bebe.png";
-  }
-}
-hoverDesc.addEventListener('click',imagenToggle);
-
-
-
-
-//Validar formLogin// 
 const formLogin=document.getElementById('formLogin');
 const nombreLog=document.getElementById('nombreLog');
 const passLog=document.getElementById('passLog')
@@ -178,17 +164,22 @@ btnLogin.addEventListener('click',function(){
 
 
 // Esto toma todas las imagenes con el class "img-cat" a las que le puse el data en el html
+
 const CatHoverMain = document.querySelectorAll(".img-cat");
+
 //Recorre las imagenes para aplicar el efecto hover. Se puede hacer con un "for" pero con "forEach" es mas limpio
+
 CatHoverMain.forEach(imagen=>{
   const original = imagen.dataset.original;
   const hover = imagen.dataset.hover;
 // Cambia la imagen original por la otra que traemos para el hover
+
   imagen.addEventListener("mouseenter",()=>{
     imagen.src = hover;
     
   });
 // Cuando se saca el mouse del marco de la imagen, vuelve a la imagen original
+
   imagen.addEventListener("mouseleave",()=>{
     imagen.src = original;
   })
@@ -196,6 +187,8 @@ CatHoverMain.forEach(imagen=>{
 
 
 //Dark mode
+
+
 const cambiarFon=document.getElementById('cambiarFon');
 const body=document.body;
 const icono=document.getElementById('icono');
@@ -217,6 +210,7 @@ if(body.classList.contains('tema-claro')){
 }
 });
 //dark mode
+
 
 // cambiar colores y elegir talles
 
@@ -254,3 +248,15 @@ btnTalleL.addEventListener('click',()=>{
 
 
 
+//Hover con click descripcion
+
+const hoverDesc = document.querySelector('.img-desc');
+
+function imagenToggle(){
+  if(hoverDesc.src.includes("fav-bebe.png")){
+    hoverDesc.src = "imagenes/fav-bebe-hover.png";
+  }else{
+    hoverDesc.src = "imagenes/fav-bebe.png";
+  }
+}
+hoverDesc.addEventListener('click',imagenToggle);

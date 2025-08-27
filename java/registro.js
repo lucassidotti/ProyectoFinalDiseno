@@ -39,17 +39,6 @@ buyBtn.setAttribute('class','btn btn-success mt-auto');
 buyBtn.textContent='Comprar';
 offcanvaBody.appendChild(buyBtn);
 
-const buscar=document.getElementById('buscar');
-buscar.addEventListener('click',()=>{
-iziToast.show({
-    title: 'Mmmm...',
-    message: 'Esto no lo sé hacer todavía.',
-    image: 'https://i.ibb.co/8pxzpfw/nombre-de-la-imagen.png',
-    imageWidth: 100,
-    imageHeight: 100,
-    position: 'topRight'
-});
-});
 
 function noSeHacerlo(){
 iziToast.show({
@@ -62,6 +51,65 @@ iziToast.show({
 });
 }
 
+const buscar=document.getElementById('buscar');
+buscar.addEventListener('click',noSeHacerlo);
+
+
+const contDin=document.getElementById('contenedorDinamico');
+const sobreNosotros=document.getElementById('sobreNosotros');
+
+sobreNosotros.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const sobreNosTitle=document.createElement('h2');
+    sobreNosTitle.innerText='Sobre nosotros...'
+    sobreNosTitle.style.textAlign='center'
+  const sobreNosP=document.createElement('p');
+    sobreNosP.innerText='Esta página fue creada desde cero por un estudiante de diseño web con el objetivo de aprender cada día más. Giannini Kidswear nace de una inspiración que me motiva a explorar y crear experiencias web únicas. ¡Espero que disfruten navegando por la página!'
+    sobreNosP.style.textAlign='justify'
+    contDin.appendChild(sobreNosTitle);
+    contDin.appendChild(sobreNosP);
+    contDin.style.display='block'
+    contDin.scrollIntoView({ behavior:'smooth',block:'start'});
+});
+
+// contenedor dinamico para descripcion footer
+const faq=document.getElementById('faq')
+faq.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const faqTitle=document.createElement('h2');
+    faqTitle.innerText='Preguntas frecuentes...'
+    faqTitle.style.textAlign='center'
+  const faqList=document.createElement('ul');
+  const q1=document.createElement('li');
+    q1.innerHTML='<strong>¿Se puede comprar algo?<br>Ojala...Porque me vendrian bien unos mangos'
+    faqList.appendChild(q1);
+  const q2=document.createElement('li');
+    q2.innerHTML='<strong>¿Hacen envios?<br>Si, pero solo dentro del edificio Matilda'
+    faqList.appendChild(q2);
+  contDin.appendChild(faqTitle);
+  contDin.appendChild(faqList)
+  contDin.style.display='block'
+  contDin.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+
+const comoComprar=document.getElementById('comoComprar');
+comoComprar.addEventListener('click',(e)=>{
+  e.preventDefault();
+  contDin.innerHTML='';
+  const comprarTitle=document.createElement('h2');
+    comprarTitle.innerText='¿Como comprar?'
+    comprarTitle.style.textAlign='center'
+  const comprarP=document.createElement('p');
+    comprarP.innerText='Todavia no podes comprar nada... '
+    comprarP.style.textAlign='justify'
+  contDin.appendChild(comprarTitle);
+  contDin.appendChild(comprarP);
+  contDin.style.display='block'
+  contDin.scrollIntoView({behavior:'smooth',block:'start'})
+});
 
 // Validar formRegistro//
 const formRegistro=document.getElementById('formRegistro');

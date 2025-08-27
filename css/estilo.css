@@ -51,12 +51,13 @@
   display: block;
   font-family: "Atma";
   text-decoration: none;
-  color: #333;
+  font-weight: normal;
+  color: #121212;
 }
 
 .dropdown-menu li a:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease-in-out;
+  transform: scale(1.01);
+  transition: 0.5s ease;
 }
 
 .inicio-lateral {
@@ -74,7 +75,6 @@
   text-decoration: none;
   color: #333;
 }
-
 .buscar input {
   border: none;
   border-bottom: 1px solid #333;
@@ -117,10 +117,12 @@ body.tema-oscuro {
   background-color: #121212;
   color: whitesmoke;
 }
-body.tema-oscuro a{
+body.tema-oscuro  .cont-a-cat a{
   color: whitesmoke;
 }
-
+body.tema-oscuro .btn-menu{
+  color: #121212;
+}
 .btn-color {
   padding: 0.8em;
   border: none;
