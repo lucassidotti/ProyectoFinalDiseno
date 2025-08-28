@@ -147,10 +147,10 @@ body.tema-oscuro header {
   background-color: #121212;
   color: whitesmoke;
 }
-body.tema-claro input::placeholder{
+body.tema-claro #buscar::placeholder{
   color: black;
 }
-body.tema-oscuro input::placeholder{
+body.tema-oscuro #buscar::placeholder{
   color: #e0e0e0;
 }
 body.tema-claro i.bi {
