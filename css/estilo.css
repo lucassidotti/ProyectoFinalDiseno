@@ -38,6 +38,12 @@
   max-width: 155px;
   height: auto;
 }
+#logo-oscuro{
+  display: none;
+  width: 100%;
+  max-width: 155px;
+  height: auto;
+}
 .btn{
   font-family: "Atma";
 }
@@ -130,9 +136,32 @@ body.tema-oscuro .btn-menu{
   padding: 0.8em;
   border: none;
   cursor: pointer;
-  width: 50px;
+  width: 55px;
+}
+body.tema-claro header {
+  background-color: #e0e0e0;
+  color: black;
 }
 
+body.tema-oscuro header {
+  background-color: #121212;
+  color: whitesmoke;
+}
+body.tema-claro input::placeholder{
+  color: black;
+}
+body.tema-oscuro input::placeholder{
+  color: #e0e0e0;
+}
+body.tema-claro i.bi {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+body.tema-oscuro i.bi {
+  
+  color: #e0e0e0;
+}
 .tema-claro .btn-color {
   background-color: #e0e0e0;
   color: black;
@@ -293,7 +322,7 @@ footer {
   border: none;
   border-bottom: 1px solid #aaa;
   background: none;
-  color: white;
+  color: whitesmoke;
   outline: none;
   width: 100%;
   padding: 0.5em 0;
@@ -301,7 +330,7 @@ footer {
 }
 
 .mail-cont input::placeholder {
-  color: #ccc;
+  color: whitesmoke;
   opacity: 1;
 }
 

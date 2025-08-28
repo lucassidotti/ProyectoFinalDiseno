@@ -192,7 +192,8 @@ CatHoverMain.forEach(imagen=>{
 const cambiarFon=document.getElementById('cambiarFon');
 const body=document.body;
 const icono=document.getElementById('icono');
-
+const logoClaro=document.getElementById('logo-claro');
+const logoOscuro=document.getElementById('logo-oscuro')
 body.classList.add('tema-claro');
 
 cambiarFon.addEventListener('click',function(){
@@ -200,13 +201,14 @@ if(body.classList.contains('tema-claro')){
     body.classList.remove('tema-claro');
     body.classList.add('tema-oscuro');
     icono.src='imagenes/sun.svg';
-    
-    
+    logoClaro.style.display='none';
+    logoOscuro.style.display='block'
 }else{
     body.classList.remove('tema-oscuro');
     body.classList.add('tema-claro');
     icono.src='imagenes/moon.svg';
-    
+    logoClaro.style.display='block';
+    logoOscuro.style.display='none'
 }
 });
 //dark mode
